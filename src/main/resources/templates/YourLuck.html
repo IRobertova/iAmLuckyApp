@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+.centerDiv{
+  width: 800px;
+  border-radius: 5px;
+  background: #ccc;
+  padding: 10px;
+  height: 50px;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: -400px;
+  top: 40%;
+  left: 50%;
+}
+.yli{
+  font-size:17px;
+  padding: 10px;
+  height: 50px;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: -400px;
+  top: 34.6%;
+  left: 50%;
+}
+.cc{
+  display: block;
+  margin: auto;
+  width: 50%;
+  border-radius: 5px;
+  border: 0;
+  background: #ccc;
+  padding: 300px 0;
+}
+.center {
+  text-align: center;
+}
+button{
+  background-color:transparent;
+  border:1px solid black;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 30px;
+  border-radius: 5px;
+  height: 45px;
+  transition-duration: 0.4s;
+  
+}
+button:hover {
+  background-color: #4CAF50;
+  border:1px solid #4CAF50;
+  color: white;
+  transform: scale(1.05) perspective(1px)
+}
+hr{
+	margin-top:150px;
+	width:100%;
+	background-color:black;
+
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Your Luck</title>
+</head>
+<body>
+ <p class="yli" align=" left" > Your luck is:</h3>
+
+<div class="centerDiv">
+ <p align="center" th:text="${Luck.value}">  </p>
+ <br>
+ <p align="right" th:text="${Luck.author}">  </p>
+ <hr>
+
+<form action="/getALuck" method="get">
+<button class="center" type="submit">Try again</button>
+</form>
+ 
+ </div>
+</body>
+</html>

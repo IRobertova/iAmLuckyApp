@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.centerDiv{
+  width: 800px;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  position: absolute;
+  margin-top: -25px;
+  margin-left: -400px;
+  top: 40%;
+  left: 50%;
+  align-self: center;
+}
+.center {
+  text-align: center;
+}
+button{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;	
+  border-radius: 5px;
+  height: 50px;
+  background-color:transparent;
+  border:1px solid black; 
+  transition-duration: 0.4s;
+  margin-top: -5px;
+
+}
+
+button:hover {
+  transform: scale(1.05) perspective(1px);
+  background-color: #4CAF50;
+  color: white;
+  border:1px solid white;
+}
+  
+p{
+  text-transform: uppercase;
+  font-size:35px;
+}
+hr{
+	margin-top: -19px;
+	margin-bottom: 29px;
+	width:100%;
+	background-color:black;
+
+}
+</style>
+<meta charset="UTF-8">
+<title>I am Lucky</title>
+</head>
+<body>
+<div class="centerDiv">
+<p class="center">Welcome to I am Lucky App</p>
+<hr>
+<form action="/getALuck" method="get">
+<button class="center" type="submit">Get a luck</button>
+</form>
+</div>
+</body>
+</html>
